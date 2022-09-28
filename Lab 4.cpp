@@ -1,4 +1,92 @@
-﻿#include <iostream>
+﻿/*#include <iostream>
+
+int main() 
+{
+	int i;
+	bool has12 = false;
+	std::cin >> i;
+
+	int s[i];
+	for (int x = 0; x < i; x++) {
+		srand(time(NULL));
+		s[x] = rand() % 10000;
+		std::cout << s[x];
+		
+		int tmp = s[x];
+		int dig_sum = 0;
+		while (tmp > 0)
+		{
+			dig_sum += (tmp % 10);
+			tmp /= 10;
+		}
+		if (dig_sum == 12) {
+			has12 = true;
+		}
+	}
+
+	if (has12 == true)
+	{
+		for (int a = 0; a < i - 1; a++)
+			for (int b = a + 1; b < i; b++)
+				if (s[a] > s[b])
+					std::swap(s[a], s[b])
+	}
+
+	for (int x = 0; x < i; x++)
+		std::cout << s[x];
+}
+*/
+
+#include <iostream>
+
+int main()
+{
+	int n;
+	std::cin >> n;
+
+	int mas[n];
+	int mas_exp[n];
+	int mas_sum[n];
+
+	for (int i = 0; i < n; i++) {
+		srand(time(NULL));
+		mas[i] = rand() % 1000;
+
+		int tmp = mas[i];
+		int dig_sum = 0;
+		int dig_exp = 1;
+		while (tmp > 0)
+		{
+			dig_sum += (tmp % 10);
+			dig_exp *= (tmp % 10);
+			tmp /= 10;
+		}
+
+		mas_exp[i] = dig_exp;
+		mas_sum[i] = dig_sum;
+
+		std::cout << mas[i];
+	}
+
+	for (int x = 0; x < n - 1; x++)
+		for (int y = x + 1; y < n; y++)
+			if ((mas_exp[x] > mas_exp[y]) ||
+				(mas_exp[x] == mas_exp[y] && mas_sum[x] > mas_sum[y]) ||
+				(mas_exp[x] == mas_exp[y] && mas_sum[x] == mas_sum[y] && mas[x] > mas[y]))
+			{
+				std::swap(mas_exp[x], mas_exp[y]);
+				std::swap(mas_sum[x], mas_sum[y]);
+				std::swap(mas[x], mas[y])
+			}
+
+	for (int i = 0; i < n; i++) {
+		std::cout << mas[i];
+	}
+}
+
+
+
+/*#include <iostream>
 
 int main()
 {
@@ -41,4 +129,4 @@ int main()
 		}
 		std::cout << "" << std::endl;
 	}
-}
+}*/
