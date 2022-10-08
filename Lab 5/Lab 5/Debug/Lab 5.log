@@ -1,0 +1,4 @@
+﻿  Lab 5.cpp
+C:\Users\GADashkov\source\repos\Lab 5\Lab 5\Lab 5.cpp(31,27): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\GADashkov\source\repos\Lab 5\Lab 5\Lab 5.cpp(33,40): warning C4804: <: небезопасное использование типа "bool" в операции
+  Lab 5.vcxproj -> C:\Users\GADashkov\source\repos\Lab 5\Debug\Lab 5.exe
