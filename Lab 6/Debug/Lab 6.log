@@ -1,0 +1,4 @@
+﻿  Lab 6.cpp
+C:\Users\GADashkov\source\repos\Lab 6\Lab 6\has8.h(4,7): error C2062: тип "bool" не требуется
+C:\Users\GADashkov\source\repos\Lab 6\Lab 6\Lab 6.cpp(51,19): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\GADashkov\source\repos\Lab 6\Lab 6\Lab 6.cpp(87,21): error C3861: has8: идентификатор не найден
